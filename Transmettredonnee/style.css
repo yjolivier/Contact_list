@@ -1,0 +1,16 @@
+body{
+	background-color: #7facf5;
+	font-family: 'montserrat';
+}
+#page1{
+	background-color: #dce8f7;
+	font-family: 'montserrat';
+}
+div{
+	margin-top: 300px;
+}
+form{
+	font-family: 'montserrat';
+	font-size: 1.2em;
+	color: #55585c;
+}
