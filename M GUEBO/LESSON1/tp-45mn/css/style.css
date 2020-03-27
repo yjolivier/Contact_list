@@ -1,0 +1,58 @@
+*{
+	font-family: 'montserrat';
+}
+.container-content{
+	background-color: #2f2f2f;
+	padding-bottom: 10px;
+}
+.ncheader , .listheader{
+	height: 60px;
+	align-items: center;
+}
+.ncheader a, .listheader a{
+	text-decoration: none;
+	font-size: 1.3em;
+	color: #fff;
+}
+.menu-btn{
+	font-size: 1.2em;
+	font-weight: 500;
+}
+.ncheader .description, .listheader .description{
+	color: #fff;
+}
+
+.listheader{
+	background-color: #626161;
+}
+.listheader .add a:hover{
+	transform: rotate(25deg);
+}
+/*
+*	forme style
+*/
+.form-control {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #2f2f2f;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+/**
+	Porfile style
+**/
+
+.profilheader .firstletter{
+	margin-top: 13px;
+	display: flex;
+	width: 80px;
+	height: 80px;
+	align-items: center;
+	justify-content: center;
+	background-color: #6c6b6b;
+	color: #fff;
+}
+.profilheader .description, .profiltable{
+	color: #fff;
+}
