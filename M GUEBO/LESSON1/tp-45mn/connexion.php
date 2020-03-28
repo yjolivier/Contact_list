@@ -11,6 +11,7 @@ if (isset($_POST['valider'])){
 	$contact = htmlspecialchars($_POST['contact']);
 	$current_data = file_get_contents('contacts.json');
 	$oldarray = json_decode($current_data, true);
+	// use timestamp with time() function to generate id
 	$endelement = end($oldarray);
 	$item  = array(
 		'id' => ($endelement['id']+1),

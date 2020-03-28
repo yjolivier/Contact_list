@@ -2,16 +2,33 @@
     require 'model.php';
     $letterGroups = array();
     $oldContact = file_get_contents("contacts.json"); //Get the information in already in contact.json
-    $arraydata = json_decode($oldContact, true); //Decode the json format in object php format
+    $arraydata = json_decode($oldContact, true); //Decode the json format in array php format
     $arraydatakey = array_keys($arraydata);
+    // use timestamp
     $lastkey = array_key_last($arraydatakey);
-    for ($i=$arraydatakey[0]; $i < $arraydatakey[$lastkey]; $i++){
+    for ($i=$arraydatakey[0]; $i <= $arraydatakey[$lastkey]; $i++){
         if (array_key_exists($i, $arraydata)) {
             $firstLetter = (string) ucfirst(substr ($arraydata[$i]["nom"], 0 , 1));
             $letterGroups[$firstLetter][] = $arraydata[$i]; 
         }
     }
+
+    // groups are sorted by alphabetical order
     ksort($letterGroups);
+
+    // overwrite letterGroups
+    foreach($letterGroups as $k => $value){
+        $persons = $letterGroups[$k];
+        // sort by name
+        usort($persons, 
+            function($a, $b){
+                return strcmp($b["nom"], $a["nom"]);
+            }
+        );
+
+        // overwrite previous data with sorted data
+        $letterGroups[$k] = $persons;
+    }
 ?>
 <!DOCTYPE Html>
 <html>

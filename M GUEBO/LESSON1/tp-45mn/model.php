@@ -76,11 +76,13 @@ function deletearr($array = null, $x) {
     if($array == null){
         $initarray = file_get_contents("contacts.json");
         $array = json_decode($initarray, true);
+        $arrdatakey = array_keys($array);
+        $lastkey = array_key_last($arrdatakey);
     }
     // check for empty array 
     if (count($array) === 0) return false; 
     $low = 0; 
-    $high = count($array) - 1; 
+    $high = $arrdatakey[$lastkey]; 
       
     while ($low <= $high) { 
           
