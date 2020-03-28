@@ -19,10 +19,6 @@
 	}
 	$apdarray = updelement($array = null,  $personid, $person);
 	$newcontactliste = json_encode($apdarray);
-
-	if (file_put_contents('contacts.json', $newcontactliste)) {
-		$msg = "ok";
-	}
 ?>
 
 
@@ -35,7 +31,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style type="text/css">
             .msgboxe{
-                color: red;
+                color: blue;
                 font-weight: bold; 
             }
         </style>

@@ -29,7 +29,7 @@ require 'model.php';
     <div class="container d-flex justify-content-center">
         <div class="container-content col-sm-8">
             <header class="profilheader row">
-                <span class="col-sm-4 menu-btn"><a href="listing.php">Contact</a></span>
+                <span class="col-sm-4 menu-btn"><a href="index.php">Contact</a></span>
                 <div class="col-sm-4 description" align="center">
                     <div class="rounded-circle firstletter">
                         <h2>
@@ -42,7 +42,8 @@ require 'model.php';
                         <h2><?= $person['nom'].' '.$person['prenom']?></h2>
                     </span>
                 </div>
-                <span class="col-sm-4 menu-btn d-flex justify-content-end"><a href="update.php?id=<?= $person['id']?>">Edith</a></span>
+                <span class="col-sm-2 menu-btn d-flex justify-content-end"><a href="delete.php?id=<?= $person['id']?>">Delete</a></span>
+                <span class="col-sm-2 menu-btn d-flex justify-content-end"><a href="update.php?id=<?= $person['id']?>">Edith</a></span>
             </header>
 
             <hr class="my-2">
