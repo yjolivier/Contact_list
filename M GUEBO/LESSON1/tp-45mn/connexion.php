@@ -25,6 +25,6 @@ if (isset($_POST['valider'])){
 	$newarray = json_encode($oldarray);
 
 	if (file_put_contents('contacts.json', $newarray)) {
-		header('Location: listing.php');
+		header('Location: index.php');
 	}
 }
